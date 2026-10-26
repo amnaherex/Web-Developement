@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide the default triangle on <details> accordions */
+@layer base {
+  summary::-webkit-details-marker { display: none; }
+}

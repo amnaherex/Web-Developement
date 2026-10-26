@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Semantic HTML5 skeleton for a generic e-commerce homepage.">
+    <title>ShopLine — Online Store</title>
+</head>
+<body>
+
+    <!-- ===== Header ===== -->
+    <header>
+        <h1><a href="index.html">ShopLine</a></h1>
+        <p>Everyday essentials, delivered.</p>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#featured">Shop</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#newsletter">Newsletter</a></li>
+                <li><a href="#footer">Contact</a></li>
+                <li><a href="#">Cart (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== Main Content ===== -->
+    <main>
+
+        <!-- Section 1: Featured Products -->
+        <section id="featured" aria-labelledby="featured-heading">
+            <h2 id="featured-heading">Featured Products</h2>
+
+            <article>
+                <h3>Organic Cotton Tank</h3>
+                <p>Soft, breathable rib tank made from 100% organic cotton.</p>
+                <p><data value="28">$28.00</data></p>
+                <button type="button">Add to Cart</button>
+            </article>
+
+            <article>
+                <h3>Striped Rugby Shirt</h3>
+                <p>Heavyweight long-sleeve rugby shirt with a woven collar.</p>
+                <p><data value="55">$55.00</data></p>
+                <button type="button">Add to Cart</button>
+            </article>
+
+            <article>
+                <h3>Two-Tone Trucker Cap</h3>
+                <p>Classic foam-front cap with a breathable mesh back.</p>
+                <p><data value="20">$20.00</data></p>
+                <button type="button">Add to Cart</button>
+            </article>
+        </section>
+
+        <!-- Section 2: Categories -->
+        <section id="categories" aria-labelledby="categories-heading">
+            <h2 id="categories-heading">Shop by Category</h2>
+            <ul>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="#">Headwear</a></li>
+                <li><a href="#">Bags &amp; Accessories</a></li>
+            </ul>
+        </section>
+
+        <!-- Section 3: Newsletter Signup -->
+        <section id="newsletter" aria-labelledby="newsletter-heading">
+            <h2 id="newsletter-heading">Join Our Newsletter</h2>
+            <p>Get new arrivals, offers and style tips straight to your inbox.</p>
+
+            <form action="#" method="post">
+                <p>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" autocomplete="name">
+                </p>
+                <p>
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </p>
+                <p>
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">I agree to receive marketing emails.</label>
+                </p>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- ===== Footer: three columns of links ===== -->
+    <footer id="footer">
+        <nav aria-label="Company">
+            <h2>Company</h2>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Store Locations</a></li>
+            </ul>
+        </nav>
+
+        <nav aria-label="Customer service">
+            <h2>Customer Service</h2>
+            <ul>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Track Order</a></li>
+            </ul>
+        </nav>
+
+        <nav aria-label="Legal and social">
+            <h2>Follow &amp; Legal</h2>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </nav>
+
+        <p><small>&copy; 2026 ShopLine. All rights reserved.</small></p>
+        <address>Contact: <a href="mailto:support@shopline.example">support@shopline.example</a></address>
+    </footer>
+
+</body>
+</html>

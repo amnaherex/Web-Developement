@@ -9,9 +9,10 @@
 <body class="bg-white font-sans text-neutral-900">
 
     <!-- ===== Header / Navbar (Tailwind) ===== -->
-    <!-- TASK 1: "relative z-50" puts the header (and its mega-menu panel) above
+    <!-- STICKY NAV: "sticky top-0" keeps the header stuck to the top while scrolling.
+         TASK 1: "z-50" puts the header (and its mega-menu panel) above
          everything else on the page: product cards, badges, sticky details. -->
-    <header class="relative z-50 bg-black text-white">
+    <header class="sticky top-0 z-50 bg-black text-white">
         <!-- TASK 1: this row is "relative" so the mega-menu panel opens right under it.
              "items-stretch" makes the menu item as tall as the header, so there is
              no gap between "Shop by Category" and the panel when the mouse moves down. -->
@@ -116,7 +117,8 @@
         </div>
         <!-- CSS-only mobile menu: checkbox + Tailwind peer-checked -->
         <input type="checkbox" id="menu-toggle" class="peer hidden">
-        <nav aria-label="Mobile" class="hidden flex-col gap-4 border-t border-neutral-800 px-4 py-4 text-sm peer-checked:flex lg:!hidden">
+        <!-- STICKY NAV: max height + overflow-y-auto so the long phone menu can scroll inside the sticky header -->
+        <nav aria-label="Mobile" class="hidden max-h-[calc(100vh-56px)] flex-col gap-4 overflow-y-auto border-t border-neutral-800 px-4 py-4 text-sm peer-checked:flex lg:!hidden">
 
             <!-- ===== TASK 1: Mobile accordion (below BP = 617px) =====
                  The same 5 groups as the mega-menu, made with <details>/<summary>.
@@ -194,8 +196,8 @@
             <img src="images/ascolour_030.jpg" alt="Wo's Organic Collegiate Tank - White" class="h-[360px] w-full object-contain md:h-[540px] lg:h-[760px]">
         </div>
 
-        <!-- Details -->
-        <div class="w-full px-4 py-8 md:px-8 lg:sticky lg:top-0 lg:w-1/2 lg:py-10 lg:pl-4 lg:pr-10">
+        <!-- Details (STICKY NAV: lg:top-20 so it sticks just below the sticky header, not under it) -->
+        <div class="w-full px-4 py-8 md:px-8 lg:sticky lg:top-20 lg:w-1/2 lg:py-10 lg:pl-4 lg:pr-10">
             <p class="mb-2 text-[10px] text-neutral-400">HOME / WOMENS / WOMENS TANKS &amp; SINGLETS</p>
             <h1 class="text-2xl font-bold md:text-3xl">Wo's Organic Collegiate Tank</h1>
             <p class="mb-6 text-2xl md:text-3xl">4097</p>

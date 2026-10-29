@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./product.html"],
+  // TASK 2: also scan the new checkout page
+  content: ["./index.html", "./product.html", "./checkout.html"],
   theme: {
     extend: {
       // TASK 1: my personal breakpoint BP = 600 + N = 600 + 17 = 617px.

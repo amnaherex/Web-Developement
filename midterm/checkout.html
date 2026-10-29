@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - AS Colour</title>
+    <!-- TASK 2: same Tailwind CSS file as the rest of the site (midterm/css/output.css) -->
+    <link rel="stylesheet" href="css/output.css">
+</head>
+<body class="bg-white font-sans text-neutral-900">
+
+    <!-- ===== Header / Navbar (Tailwind) ===== -->
+    <!-- STICKY NAV: "sticky top-0" keeps the header stuck to the top while scrolling.
+         TASK 1: "z-50" puts the header (and its mega-menu panel) above
+         everything else on the page: product cards, badges, sticky details. -->
+    <header class="sticky top-0 z-50 bg-black text-white">
+        <!-- TASK 1: this row is "relative" so the mega-menu panel opens right under it.
+             "items-stretch" makes the menu item as tall as the header, so there is
+             no gap between "Shop by Category" and the panel when the mouse moves down. -->
+        <div class="relative flex items-stretch justify-between gap-4 px-4 md:px-8">
+            <div class="flex items-stretch gap-8">
+                <a href="index.html" class="flex items-center py-4"><img src="images/ascolour_001.svg" alt="AS Colour" class="h-5 md:h-6"></a>
+
+                <!-- TASK 1: the main nav now shows from BP (617px) instead of 1024px -->
+                <nav aria-label="Main" class="hidden items-stretch gap-6 text-sm bp:flex">
+
+                    <!-- ===== TASK 1: Mega-menu (HTML + CSS only, no JavaScript) =====
+                         "group" = the trigger link and the panel together.
+                         The panel opens on:
+                           group-hover        -> mouse is over the link OR the panel
+                           group-focus-within -> keyboard focus (Tab) is on the link
+                                                 or on any link inside the panel
+                         When focus or the mouse leaves the group, the panel hides again. -->
+                    <div class="group flex items-stretch">
+                        <a href="#" class="flex items-center gap-1 font-bold hover:text-gold focus:text-gold" aria-haspopup="true">Shop by Category <span aria-hidden="true">&#9662;</span></a>
+
+                        <!-- TASK 1: the panel
+                             absolute + top-full    -> sits under the header, does NOT push the page down
+                             left-0 right-0         -> full width
+                             hidden + group-*:block -> only shown on hover / focus
+                             grid-cols-5            -> K = 5 columns -->
+                        <div class="absolute left-0 right-0 top-full z-50 hidden border-t border-neutral-800 bg-black px-4 py-8 shadow-xl group-focus-within:block group-hover:block md:px-8">
+                            <div class="grid grid-cols-5 gap-4 md:gap-8">
+                                <div>
+                                    <h3 class="mb-4 text-xs font-bold uppercase tracking-widest text-gold">Men</h3>
+                                    <ul class="space-y-3">
+                                        <li><a href="#" class="hover:text-gold focus:text-gold">T-Shirts</a></li>
+                                        <li><a href="#" class="hover:text-gold focus:text-gold">Hoodies</a></li>
+                                        <li><a href="#" class="hover:text-gold focus:text-gold">Jackets</a></li>
+                                        <li><a href="#" class="hover:text-gold focus:text-gold">Shorts</a></li>
+                                        <li><a href="#" class="hover:text-gold focus:text-gold">Tanks</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="mb-4 text-xs font-bold uppercase tracking-widest text-gold">Women</h3>
+                                    <ul class="space-y-3">
+                                        <li><a href="#" class="hover:text-gold focus:text-gold">T-Shirts</a></li>
+                                        <li><a href="#" class="hover:text-gold focus:text-gold">Crops</a></li>
+                                        <li><a href="#" class="hover:text-gold focus:text-gold">Sweats</a></li>
+                                        <li><a href="#" class="hover:text-gold focus:text-gold">Tanks</a></li>
+                                        <li><a href="#" class="hover:text-gold focus:text-gold">Dresses</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="mb-4 text-xs font-bold uppercase tracking-widest text-gold">Kids</h3>
+                                    <ul class="space-y-3">
+                                        <li><a href="#" class="hover:text-gold focus:text-gold">Youth Tees</a></li>
+                                        <li><a href="#" class="hover:text-gold focus:text-gold">Kids Hoods</a></li>
+                                        <li><a href="#" class="hover:text-gold focus:text-gold">Toddler</a></li>
+                                        <li><a href="#" class="hover:text-gold focus:text-gold">Baby</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="mb-4 text-xs font-bold uppercase tracking-widest text-gold">Headwear</h3>
+                                    <ul class="space-y-3">
+                                        <li><a href="#" class="hover:text-gold focus:text-gold">Caps</a></li>
+                                        <li><a href="#" class="hover:text-gold focus:text-gold">Truckers</a></li>
+                                        <li><a href="#" class="hover:text-gold focus:text-gold">Beanies</a></li>
+                                        <li><a href="#" class="hover:text-gold focus:text-gold">Bucket Hats</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="mb-4 text-xs font-bold uppercase tracking-widest text-gold">Bags</h3>
+                                    <ul class="space-y-3">
+                                        <li><a href="#" class="hover:text-gold focus:text-gold">Totes</a></li>
+                                        <li><a href="#" class="hover:text-gold focus:text-gold">Backpacks</a></li>
+                                        <li><a href="#" class="hover:text-gold focus:text-gold">Aprons</a></li>
+                                        <li><a href="#" class="hover:text-gold focus:text-gold">Socks</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ===== end TASK 1 mega-menu ===== -->
+
+                    <!-- These links still show only from 1024px, so the header fits at 617px -->
+                    <a href="#" class="hidden items-center hover:text-gold lg:flex">Men</a>
+                    <a href="#" class="hidden items-center hover:text-gold lg:flex">Women</a>
+                    <a href="#" class="hidden items-center hover:text-gold lg:flex">Kids</a>
+                    <a href="#" class="hidden items-center hover:text-gold lg:flex">Headwear</a>
+                    <a href="#" class="hidden items-center hover:text-gold lg:flex">About</a>
+                    <a href="#" class="hidden items-center hover:text-gold lg:flex">Journal</a>
+                    <a href="#" class="hidden items-center text-gold lg:flex">Outlet</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4 py-4 text-sm md:gap-6">
+                <a href="#" class="hidden md:inline">Search</a>
+                <a href="#" class="hidden md:inline">Sign In</a>
+                <!-- TASK 2: cart icon now opens the checkout page -->
+                <a href="checkout.html" aria-label="Cart" class="flex items-center gap-1">
+                    <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l1 13H5L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+                    <span class="text-xs">0</span>
+                </a>
+                <a href="#" class="hidden rounded-full bg-white px-4 py-2 text-black md:inline-block">Create Account</a>
+                <label for="menu-toggle" class="cursor-pointer lg:hidden" aria-label="Open menu">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+                </label>
+            </div>
+        </div>
+        <!-- CSS-only mobile menu: checkbox + Tailwind peer-checked -->
+        <input type="checkbox" id="menu-toggle" class="peer hidden">
+        <!-- STICKY NAV: max height + overflow-y-auto so the long phone menu can scroll inside the sticky header -->
+        <nav aria-label="Mobile" class="hidden max-h-[calc(100vh-56px)] flex-col gap-4 overflow-y-auto border-t border-neutral-800 px-4 py-4 text-sm peer-checked:flex lg:!hidden">
+
+            <!-- ===== TASK 1: Mobile accordion (below BP = 617px) =====
+                 The same 5 groups as the mega-menu, made with <details>/<summary>.
+                 Closed by default, each one opens on its own.
+                 "bp:hidden" hides it from 617px up, where the mega-menu takes over. -->
+            <div class="bp:hidden">
+                <p class="mb-2 text-xs font-bold uppercase tracking-widest text-gold">Shop by Category</p>
+                <details class="group border-b border-neutral-800">
+                    <summary class="flex cursor-pointer list-none justify-between py-3 after:content-['+'] group-open:after:content-['−']">Men</summary>
+                    <ul class="space-y-3 pb-4 pl-4">
+                        <li><a href="#">T-Shirts</a></li>
+                        <li><a href="#">Hoodies</a></li>
+                        <li><a href="#">Jackets</a></li>
+                        <li><a href="#">Shorts</a></li>
+                        <li><a href="#">Tanks</a></li>
+                    </ul>
+                </details>
+                <details class="group border-b border-neutral-800">
+                    <summary class="flex cursor-pointer list-none justify-between py-3 after:content-['+'] group-open:after:content-['−']">Women</summary>
+                    <ul class="space-y-3 pb-4 pl-4">
+                        <li><a href="#">T-Shirts</a></li>
+                        <li><a href="#">Crops</a></li>
+                        <li><a href="#">Sweats</a></li>
+                        <li><a href="#">Tanks</a></li>
+                        <li><a href="#">Dresses</a></li>
+                    </ul>
+                </details>
+                <details class="group border-b border-neutral-800">
+                    <summary class="flex cursor-pointer list-none justify-between py-3 after:content-['+'] group-open:after:content-['−']">Kids</summary>
+                    <ul class="space-y-3 pb-4 pl-4">
+                        <li><a href="#">Youth Tees</a></li>
+                        <li><a href="#">Kids Hoods</a></li>
+                        <li><a href="#">Toddler</a></li>
+                        <li><a href="#">Baby</a></li>
+                    </ul>
+                </details>
+                <details class="group border-b border-neutral-800">
+                    <summary class="flex cursor-pointer list-none justify-between py-3 after:content-['+'] group-open:after:content-['−']">Headwear</summary>
+                    <ul class="space-y-3 pb-4 pl-4">
+                        <li><a href="#">Caps</a></li>
+                        <li><a href="#">Truckers</a></li>
+                        <li><a href="#">Beanies</a></li>
+                        <li><a href="#">Bucket Hats</a></li>
+                    </ul>
+                </details>
+                <details class="group border-b border-neutral-800">
+                    <summary class="flex cursor-pointer list-none justify-between py-3 after:content-['+'] group-open:after:content-['−']">Bags</summary>
+                    <ul class="space-y-3 pb-4 pl-4">
+                        <li><a href="#">Totes</a></li>
+                        <li><a href="#">Backpacks</a></li>
+                        <li><a href="#">Aprons</a></li>
+                        <li><a href="#">Socks</a></li>
+                    </ul>
+                </details>
+            </div>
+            <!-- ===== end TASK 1 mobile accordion ===== -->
+
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">Kids</a>
+            <a href="#">Headwear</a>
+            <a href="#">About</a>
+            <a href="#">Journal</a>
+            <a href="#" class="text-gold">Outlet</a>
+            <a href="#">Search</a>
+            <a href="#">Sign In</a>
+        </nav>
+    </header>
+
+    <!-- ===== TASK 2: Checkout form (HTML5 validation + CSS only, no JavaScript) ===== -->
+    <main class="mx-auto max-w-5xl px-4 py-10 md:px-8">
+        <h1 class="mb-8 text-2xl font-bold md:text-3xl">Checkout</h1>
+
+        <!-- TASK 2: the browser checks required, type, pattern, min and max before submitting.
+             Layout: 1 column on phone; from BP (617px) the two fieldsets sit side by side. -->
+        <form action="#" method="post" class="grid gap-6 bp:grid-cols-2">
+
+            <!-- ===== Fieldset 1: Contact ===== -->
+            <!-- min-w-0 stops a fieldset from overflowing its grid column -->
+            <fieldset class="min-w-0 space-y-4 border border-neutral-300 p-4 md:p-6">
+                <legend class="px-2 text-sm font-bold uppercase tracking-widest">Contact</legend>
+
+                <!-- TASK 2: each row = label + input.
+                     Below BP: label above input.
+                     From BP: grid with a fixed label column (7rem) on the left, input on the right (minmax(0,1fr) stops inputs overflowing). -->
+                <div class="grid gap-1 bp:grid-cols-[7rem_minmax(0,1fr)] bp:gap-x-4">
+                    <label for="fullname" class="text-sm bp:pt-2">Full name</label>
+                    <div>
+                        <!-- "peer" lets the message below react to this input's state.
+                             [&:user-invalid] = red border only AFTER the user has interacted. -->
+                        <input id="fullname" name="fullname" type="text" required minlength="3" autocomplete="name"
+                               class="peer w-full border border-neutral-300 px-3 py-2 text-sm outline-none focus:border-black [&:user-invalid]:border-red-600">
+                        <p class="mt-1 hidden text-xs text-red-600 peer-[:user-invalid]:block">Enter your full name (at least 3 letters).</p>
+                    </div>
+                </div>
+
+                <div class="grid gap-1 bp:grid-cols-[7rem_minmax(0,1fr)] bp:gap-x-4">
+                    <label for="email" class="text-sm bp:pt-2">Email</label>
+                    <div>
+                        <input id="email" name="email" type="email" required autocomplete="email"
+                               class="peer w-full border border-neutral-300 px-3 py-2 text-sm outline-none focus:border-black [&:user-invalid]:border-red-600">
+                        <p class="mt-1 hidden text-xs text-red-600 peer-[:user-invalid]:block">Enter a valid email, e.g. name@mail.com.</p>
+                    </div>
+                </div>
+
+                <div class="grid gap-1 bp:grid-cols-[7rem_minmax(0,1fr)] bp:gap-x-4">
+                    <label for="phone" class="text-sm bp:pt-2">Phone</label>
+                    <div>
+                        <!-- TASK 2: pattern = 03 + 2 digits + dash + 7 digits (03XX-XXXXXXX) -->
+                        <input id="phone" name="phone" type="tel" required pattern="03[0-9]{2}-[0-9]{7}" placeholder="03XX-XXXXXXX" autocomplete="tel"
+                               class="peer w-full border border-neutral-300 px-3 py-2 text-sm outline-none focus:border-black [&:user-invalid]:border-red-600">
+                        <p class="mt-1 hidden text-xs text-red-600 peer-[:user-invalid]:block">Use the format 03XX-XXXXXXX.</p>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- ===== Fieldset 2: Delivery ===== -->
+            <fieldset class="min-w-0 space-y-4 border border-neutral-300 p-4 md:p-6">
+                <legend class="px-2 text-sm font-bold uppercase tracking-widest">Delivery</legend>
+
+                <div class="grid gap-1 bp:grid-cols-[7rem_minmax(0,1fr)] bp:gap-x-4">
+                    <label for="address" class="text-sm bp:pt-2">Address</label>
+                    <div>
+                        <input id="address" name="address" type="text" required minlength="5" autocomplete="street-address"
+                               class="peer w-full border border-neutral-300 px-3 py-2 text-sm outline-none focus:border-black [&:user-invalid]:border-red-600">
+                        <p class="mt-1 hidden text-xs text-red-600 peer-[:user-invalid]:block">Enter your street address.</p>
+                    </div>
+                </div>
+
+                <div class="grid gap-1 bp:grid-cols-[7rem_minmax(0,1fr)] bp:gap-x-4">
+                    <label for="city" class="text-sm bp:pt-2">City</label>
+                    <div>
+                        <!-- TASK 2: city as a <select>; the empty first option makes "required" work -->
+                        <select id="city" name="city" required
+                                class="peer w-full border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:border-black [&:user-invalid]:border-red-600">
+                            <option value="">Choose a city</option>
+                            <option>Lahore</option>
+                            <option>Karachi</option>
+                            <option>Islamabad</option>
+                            <option>Rawalpindi</option>
+                            <option>Faisalabad</option>
+                            <option>Multan</option>
+                            <option>Peshawar</option>
+                        </select>
+                        <p class="mt-1 hidden text-xs text-red-600 peer-[:user-invalid]:block">Choose a city.</p>
+                    </div>
+                </div>
+
+                <div class="grid gap-1 bp:grid-cols-[7rem_minmax(0,1fr)] bp:gap-x-4">
+                    <label for="date" class="text-sm bp:pt-2">Delivery date</label>
+                    <div>
+                        <!-- TASK 2: min = exam date (29 Oct 2026), max = exam date + N (17) days = 15 Nov 2026 -->
+                        <input id="date" name="date" type="date" required min="2026-10-29" max="2026-11-15"
+                               class="peer w-full border border-neutral-300 px-3 py-2 text-sm outline-none focus:border-black [&:user-invalid]:border-red-600">
+                        <p class="mt-1 hidden text-xs text-red-600 peer-[:user-invalid]:block">Pick a date from 29 Oct to 15 Nov 2026.</p>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- TASK 2: submit button is full width at every size (spans both columns from BP) -->
+            <button type="submit" class="w-full bg-black py-4 text-sm font-bold uppercase text-white hover:bg-neutral-700 bp:col-span-2">Place Order</button>
+        </form>
+    </main>
+    <!-- ===== end TASK 2 ===== -->
+
+    <!-- ===== Footer (identical on both pages) ===== -->
+    <footer class="bg-black px-4 pb-10 pt-16 text-white md:px-10">
+        <div class="mb-16 flex flex-wrap gap-y-10">
+            <div class="w-1/2 pr-4 lg:w-1/4">
+                <h4 class="mb-6 text-sm font-bold">Company</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="hover:text-gold">About Us</a></li>
+                    <li><a href="#" class="hover:text-gold">Careers</a></li>
+                    <li><a href="#" class="hover:text-gold">Showroom Locations</a></li>
+                    <li><a href="#" class="hover:text-gold">Social Responsibility</a></li>
+                </ul>
+                <p class="mt-6 text-sm leading-relaxed">+1 (213) 213-5531<br>support@ascolour.com</p>
+            </div>
+            <div class="w-1/2 pr-4 lg:w-1/4">
+                <h4 class="mb-6 text-sm font-bold">Customer Service</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="hover:text-gold">FAQs</a></li>
+                    <li><a href="#" class="hover:text-gold">Shipping</a></li>
+                    <li><a href="#" class="hover:text-gold">Returns</a></li>
+                    <li><a href="#" class="hover:text-gold">The Journal</a></li>
+                    <li><a href="#" class="hover:text-gold">Terms / Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-gold">Gift Vouchers</a></li>
+                </ul>
+            </div>
+            <div class="w-1/2 pr-4 lg:w-1/4">
+                <h4 class="mb-6 text-sm font-bold">Wholesale Resources</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="hover:text-gold">Fabric Range</a></li>
+                    <li><a href="#" class="hover:text-gold">Colour Range</a></li>
+                    <li><a href="#" class="hover:text-gold">Downloads &amp; Assets</a></li>
+                    <li><a href="#" class="hover:text-gold">Printers &amp; Embroiderers</a></li>
+                    <li><a href="#" class="hover:text-gold">Invoices &amp; Payments (TermSync)</a></li>
+                </ul>
+            </div>
+            <div class="w-full lg:w-1/4">
+                <h4 class="mb-6 text-sm font-bold">Stay Connected</h4>
+                <p class="text-sm leading-relaxed">Be one of the first to receive new product launches, sale offers, collabs &amp; more.</p>
+                <form action="#" class="mt-5 flex overflow-hidden rounded-full border border-white">
+                    <input type="email" placeholder="Your email" aria-label="Email" class="min-w-0 flex-1 bg-transparent px-5 py-3 text-sm text-white outline-none placeholder:text-neutral-400">
+                    <button type="submit" class="px-5" aria-label="Subscribe">&rarr;</button>
+                </form>
+            </div>
+        </div>
+        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <img src="images/ascolour_040.svg" alt="AS Colour 20 Years" class="h-12 w-auto self-start md:h-14">
+            <div>
+                <p class="mb-3 text-sm">United States | USD$</p>
+                <div class="flex flex-wrap items-center gap-1.5">
+                    <img src="images/ascolour_041.svg" alt="Visa" class="h-5">
+                    <img src="images/ascolour_042.svg" alt="Mastercard" class="h-5">
+                    <img src="images/ascolour_043.svg" alt="Maestro" class="h-5">
+                    <img src="images/ascolour_044.svg" alt="American Express" class="h-5">
+                    <img src="images/ascolour_045.svg" alt="Discover" class="h-5">
+                    <img src="images/ascolour_046.svg" alt="Diners Club" class="h-5">
+                    <img src="images/ascolour_047.svg" alt="PayPal" class="h-5">
+                    <img src="images/ascolour_048.svg" alt="Apple Pay" class="h-5">
+                    <img src="images/ascolour_049.svg" alt="Google Pay" class="h-5">
+                    <img src="images/ascolour_050.svg" alt="Klarna" class="h-5">
+                    <img src="images/ascolour_051.svg" alt="Cash App" class="h-5">
+                    <img src="images/ascolour_052.svg" alt="JCB" class="h-5">
+                    <img src="images/ascolour_053.svg" alt="UnionPay" class="h-5">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="flex justify-between bg-bronze px-4 py-3 text-xs text-black md:px-10">
+        <span>&copy; 2026 AS Colour. Premium Blanks</span>
+        <a href="#">Back to top &uarr;</a>
+    </div>
+
+</body>
+</html>

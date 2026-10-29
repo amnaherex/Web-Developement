@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wo's Organic Collegiate Tank - AS Colour</title>
+    <link rel="stylesheet" href="css/output.css">
+</head>
+<body class="bg-white font-sans text-neutral-900">
+
+    <!-- ===== Header / Navbar (Tailwind) ===== -->
+    <header class="bg-black text-white">
+        <div class="flex items-center justify-between gap-4 px-4 py-4 md:px-8">
+            <div class="flex items-center gap-8">
+                <a href="index.html"><img src="images/ascolour_001.svg" alt="AS Colour" class="h-5 md:h-6"></a>
+                <nav class="hidden gap-6 text-sm lg:flex">
+                    <a href="#" class="hover:text-gold">Men</a>
+                    <a href="#" class="hover:text-gold">Women</a>
+                    <a href="#" class="hover:text-gold">Kids</a>
+                    <a href="#" class="hover:text-gold">Headwear</a>
+                    <a href="#" class="hover:text-gold">About</a>
+                    <a href="#" class="hover:text-gold">Journal</a>
+                    <a href="#" class="text-gold">Outlet</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4 text-sm md:gap-6">
+                <a href="#" class="hidden md:inline">Search</a>
+                <a href="#" class="hidden md:inline">Sign In</a>
+                <a href="#" aria-label="Cart" class="flex items-center gap-1">
+                    <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l1 13H5L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+                    <span class="text-xs">0</span>
+                </a>
+                <a href="#" class="hidden rounded-full bg-white px-4 py-2 text-black md:inline-block">Create Account</a>
+                <label for="menu-toggle" class="cursor-pointer lg:hidden" aria-label="Open menu">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+                </label>
+            </div>
+        </div>
+        <!-- CSS-only mobile menu: checkbox + Tailwind peer-checked -->
+        <input type="checkbox" id="menu-toggle" class="peer hidden">
+        <nav class="hidden flex-col gap-4 border-t border-neutral-800 px-4 py-4 text-sm peer-checked:flex lg:!hidden">
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">Kids</a>
+            <a href="#">Headwear</a>
+            <a href="#">About</a>
+            <a href="#">Journal</a>
+            <a href="#" class="text-gold">Outlet</a>
+            <a href="#">Search</a>
+            <a href="#">Sign In</a>
+        </nav>
+    </header>
+
+    <!-- ===== Product Detail ===== -->
+    <main class="flex flex-col lg:flex-row lg:items-start">
+
+        <!-- Gallery -->
+        <div class="w-full bg-white lg:w-1/2">
+            <img src="images/ascolour_030.jpg" alt="Wo's Organic Collegiate Tank - White" class="h-[360px] w-full object-contain md:h-[540px] lg:h-[760px]">
+        </div>
+
+        <!-- Details -->
+        <div class="w-full px-4 py-8 md:px-8 lg:sticky lg:top-0 lg:w-1/2 lg:py-10 lg:pl-4 lg:pr-10">
+            <p class="mb-2 text-[10px] text-neutral-400">HOME / WOMENS / WOMENS TANKS &amp; SINGLETS</p>
+            <h1 class="text-2xl font-bold md:text-3xl">Wo's Organic Collegiate Tank</h1>
+            <p class="mb-6 text-2xl md:text-3xl">4097</p>
+            <p class="mb-4 text-xl">$28.00</p>
+
+            <p class="mb-6 max-w-xl text-sm leading-relaxed text-neutral-700">
+                A slim-fit collegiate tank in heavyweight organic cotton rib with a touch of stretch.
+                Wide self-fabric binding at the neck and straps gives it a clean, structured look that
+                holds up to screen printing and embroidery.
+            </p>
+
+            <!-- Bulk discounts -->
+            <div class="mb-6 max-w-[220px] text-xs">
+                <p class="mb-2 font-bold">See Bulk Discounts</p>
+                <div class="mb-1 flex text-neutral-500"><span class="flex-1">Qty</span><span class="flex-1">Price/Unit ($)</span></div>
+                <div class="mb-1 flex"><span class="flex-1">1–9</span><span class="flex-1">28.00</span></div>
+                <div class="mb-1 flex"><span class="flex-1">10–49</span><span class="flex-1">21.00</span></div>
+                <div class="flex"><span class="flex-1">50+</span><span class="flex-1">18.20</span></div>
+            </div>
+
+            <!-- Colour (CSS-only, Tailwind peer-checked) -->
+            <p class="mb-3 text-xs">Select Colour</p>
+            <div class="mb-6 flex items-center gap-3">
+                <label class="cursor-pointer">
+                    <input type="radio" name="colour" class="peer sr-only" checked>
+                    <span class="block h-8 w-8 rounded-full border border-neutral-400 bg-white peer-checked:ring-2 peer-checked:ring-black peer-checked:ring-offset-2" title="White"></span>
+                </label>
+                <label class="cursor-pointer">
+                    <input type="radio" name="colour" class="peer sr-only">
+                    <span class="block h-8 w-8 rounded-full border border-neutral-400 bg-black peer-checked:ring-2 peer-checked:ring-black peer-checked:ring-offset-2" title="Black"></span>
+                </label>
+            </div>
+
+            <!-- Size (CSS-only, Tailwind peer-checked) -->
+            <p class="mb-3 text-xs">Select Size</p>
+            <div class="mb-5 flex flex-wrap gap-1.5">
+                <label class="min-w-[48px] flex-1 cursor-pointer"><input type="radio" name="size" class="peer sr-only"><span class="block border border-neutral-300 py-3 text-center text-xs hover:border-black peer-checked:border-black peer-checked:bg-black peer-checked:text-white">XSM</span></label>
+                <label class="min-w-[48px] flex-1 cursor-pointer"><input type="radio" name="size" class="peer sr-only"><span class="block border border-neutral-300 py-3 text-center text-xs hover:border-black peer-checked:border-black peer-checked:bg-black peer-checked:text-white">SML</span></label>
+                <label class="min-w-[48px] flex-1 cursor-pointer"><input type="radio" name="size" class="peer sr-only"><span class="block border border-neutral-300 py-3 text-center text-xs hover:border-black peer-checked:border-black peer-checked:bg-black peer-checked:text-white">MED</span></label>
+                <label class="min-w-[48px] flex-1 cursor-pointer"><input type="radio" name="size" class="peer sr-only"><span class="block border border-neutral-300 py-3 text-center text-xs hover:border-black peer-checked:border-black peer-checked:bg-black peer-checked:text-white">LRG</span></label>
+                <label class="min-w-[48px] flex-1 cursor-pointer"><input type="radio" name="size" class="peer sr-only"><span class="block border border-neutral-300 py-3 text-center text-xs hover:border-black peer-checked:border-black peer-checked:bg-black peer-checked:text-white">XLG</span></label>
+                <label class="min-w-[48px] flex-1 cursor-pointer"><input type="radio" name="size" class="peer sr-only"><span class="block border border-neutral-300 py-3 text-center text-xs hover:border-black peer-checked:border-black peer-checked:bg-black peer-checked:text-white">2XL</span></label>
+            </div>
+
+            <!-- Quantity selector + Add to Cart (not functional yet) -->
+            <div class="mb-5 flex gap-3">
+                <label for="qty" class="sr-only">Quantity</label>
+                <input id="qty" type="number" min="1" max="999" value="1" class="h-12 w-20 border border-neutral-300 text-center text-sm">
+                <button type="button" class="h-12 flex-1 bg-black text-sm font-bold text-white hover:bg-neutral-700">Add to Cart</button>
+            </div>
+
+            <div class="mb-5 flex flex-wrap items-center gap-4">
+                <button type="button" class="border border-black px-5 py-3 text-xs font-bold">View Bulk Order Grid</button>
+                <span class="text-[11px]">Same Day Processing Target <span class="text-neutral-400">Before 2pm PST &amp; EDT</span></span>
+            </div>
+
+            <div class="mb-8 flex gap-2">
+                <a href="#" class="border border-neutral-300 px-4 py-2 text-[11px]">Size Guide</a>
+                <a href="#" class="border border-neutral-300 px-4 py-2 text-[11px]">Product Images</a>
+            </div>
+
+            <!-- Accordions (native <details>, no JS) -->
+            <details class="group border-t border-neutral-200 text-sm" open>
+                <summary class="flex cursor-pointer list-none justify-between py-4 after:content-['+'] group-open:after:content-['−']">Details</summary>
+                <div class="pb-5 text-xs leading-relaxed">
+                    <div class="mb-3 flex gap-5"><span class="w-28 shrink-0">Fit</span><p>Slim</p></div>
+                    <div class="mb-3 flex gap-5"><span class="w-28 shrink-0">Fabric</span><p>Heavy weight, 9.7oz, 95% organic cotton rib, 5% spandex</p></div>
+                    <div class="mb-3 flex gap-5"><span class="w-28 shrink-0">Construction</span><p>Self-fabric wide binding at neck and shoulder straps, 2x2 rib, double needle hem, mid length, preshrunk to minimize shrinkage. Tear-out AS Colour label.</p></div>
+                    <div class="flex gap-5"><span class="w-28 shrink-0">Embellishment</span><p>Suited for screen printing and embroidery</p></div>
+                </div>
+            </details>
+            <details class="group border-t border-neutral-200 text-sm">
+                <summary class="flex cursor-pointer list-none justify-between py-4 after:content-['+'] group-open:after:content-['−']">Companion Styles</summary>
+                <p class="pb-5 text-xs">See the related styles below.</p>
+            </details>
+            <details class="group border-t border-neutral-200 text-sm">
+                <summary class="flex cursor-pointer list-none justify-between py-4 after:content-['+'] group-open:after:content-['−']">Shipping and Returns</summary>
+                <p class="pb-5 text-xs">Same day processing on orders placed before 2pm PST &amp; EDT.</p>
+            </details>
+            <details class="group border-t border-neutral-200 text-sm">
+                <summary class="flex cursor-pointer list-none justify-between py-4 after:content-['+'] group-open:after:content-['−']">Care Instructions</summary>
+                <p class="pb-5 text-xs">Cold wash, do not tumble dry, warm iron.</p>
+            </details>
+            <details class="group border-y border-neutral-200 text-sm">
+                <summary class="flex cursor-pointer list-none justify-between py-4 after:content-['+'] group-open:after:content-['−']">Reviews</summary>
+                <p class="pb-5 text-xs">No reviews yet.</p>
+            </details>
+        </div>
+    </main>
+
+    <!-- ===== Organic Banner ===== -->
+    <section class="mt-16 flex flex-col md:flex-row">
+        <div class="relative md:w-1/2">
+            <img src="images/ascolour_013.jpg" alt="Organic range landscape" class="h-72 w-full object-cover md:h-[600px]">
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-white">
+                <span class="text-xs">WOMEN</span>
+                <strong class="text-3xl">Organic</strong>
+            </div>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-6 bg-neutral-800 px-6 py-12 text-center text-white md:w-1/2">
+            <p class="max-w-lg text-sm leading-relaxed">Discover our organic range, made from eco-friendly quality cotton. Grown without the use of herbicides or pesticides.</p>
+            <a href="index.html" class="text-sm font-bold">View range &rarr;</a>
+        </div>
+    </section>
+
+    <!-- ===== Customers Also Bought ===== -->
+    <section class="px-4 py-12 md:px-5">
+        <h2 class="mb-5 text-xl font-bold">Customers Also Bought</h2>
+        <div class="-mx-2 flex flex-wrap">
+            <a href="product.html" class="mb-6 w-1/2 px-2 text-center lg:w-1/4">
+                <img src="images/ascolour_032.webp" alt="Classic Minus Tee" class="mb-3 h-44 w-full bg-neutral-100 object-contain md:h-80">
+                <h3 class="text-sm font-bold">Classic Minus Tee | 5079</h3>
+                <p class="text-xs text-neutral-500">$32.00</p>
+            </a>
+            <a href="product.html" class="mb-6 w-1/2 px-2 text-center lg:w-1/4">
+                <img src="images/ascolour_031.webp" alt="Rugby Stripe" class="mb-3 h-44 w-full bg-neutral-100 object-contain md:h-80">
+                <h3 class="text-sm font-bold">Rugby Stripe | 5416</h3>
+                <p class="text-xs text-neutral-500">$55.00</p>
+            </a>
+            <a href="product.html" class="mb-6 w-1/2 px-2 text-center lg:w-1/4">
+                <img src="images/ascolour_033.webp" alt="Frame Foam Two-Tone Trucker" class="mb-3 h-44 w-full bg-neutral-100 object-contain md:h-80">
+                <h3 class="text-sm font-bold">Frame Foam Two-Tone Trucker | 1163</h3>
+                <p class="text-xs text-neutral-500">$20.00</p>
+            </a>
+            <a href="product.html" class="mb-6 w-1/2 px-2 text-center lg:w-1/4">
+                <img src="images/ascolour_012.jpg" alt="Cuff Beanie" class="mb-3 h-44 w-full bg-neutral-100 object-cover md:h-80">
+                <h3 class="text-sm font-bold">Cuff Beanie | 1120</h3>
+                <p class="text-xs text-neutral-500">$18.00</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== Follow Us ===== -->
+    <section class="px-4 pb-16 md:px-12">
+        <h2 class="mb-5 text-xl">Follow us @ascolour</h2>
+        <div class="flex flex-wrap gap-2">
+            <img src="images/ascolour_005.jpg" alt="Instagram post" class="h-44 w-[calc(50%-4px)] object-cover md:h-80 lg:w-[calc(25%-6px)]">
+            <img src="images/ascolour_015.jpg" alt="Instagram post" class="h-44 w-[calc(50%-4px)] object-cover md:h-80 lg:w-[calc(25%-6px)]">
+            <img src="images/ascolour_014.jpg" alt="Instagram post" class="h-44 w-[calc(50%-4px)] object-cover md:h-80 lg:w-[calc(25%-6px)]">
+            <img src="images/ascolour_039.webp" alt="Merch Series" class="h-44 w-[calc(50%-4px)] object-cover md:h-80 lg:w-[calc(25%-6px)]">
+        </div>
+    </section>
+
+    <!-- ===== Footer (identical on both pages) ===== -->
+    <footer class="bg-black px-4 pb-10 pt-16 text-white md:px-10">
+        <div class="mb-16 flex flex-wrap gap-y-10">
+            <div class="w-1/2 pr-4 lg:w-1/4">
+                <h4 class="mb-6 text-sm font-bold">Company</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="hover:text-gold">About Us</a></li>
+                    <li><a href="#" class="hover:text-gold">Careers</a></li>
+                    <li><a href="#" class="hover:text-gold">Showroom Locations</a></li>
+                    <li><a href="#" class="hover:text-gold">Social Responsibility</a></li>
+                </ul>
+                <p class="mt-6 text-sm leading-relaxed">+1 (213) 213-5531<br>support@ascolour.com</p>
+            </div>
+            <div class="w-1/2 pr-4 lg:w-1/4">
+                <h4 class="mb-6 text-sm font-bold">Customer Service</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="hover:text-gold">FAQs</a></li>
+                    <li><a href="#" class="hover:text-gold">Shipping</a></li>
+                    <li><a href="#" class="hover:text-gold">Returns</a></li>
+                    <li><a href="#" class="hover:text-gold">The Journal</a></li>
+                    <li><a href="#" class="hover:text-gold">Terms / Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-gold">Gift Vouchers</a></li>
+                </ul>
+            </div>
+            <div class="w-1/2 pr-4 lg:w-1/4">
+                <h4 class="mb-6 text-sm font-bold">Wholesale Resources</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="hover:text-gold">Fabric Range</a></li>
+                    <li><a href="#" class="hover:text-gold">Colour Range</a></li>
+                    <li><a href="#" class="hover:text-gold">Downloads &amp; Assets</a></li>
+                    <li><a href="#" class="hover:text-gold">Printers &amp; Embroiderers</a></li>
+                    <li><a href="#" class="hover:text-gold">Invoices &amp; Payments (TermSync)</a></li>
+                </ul>
+            </div>
+            <div class="w-full lg:w-1/4">
+                <h4 class="mb-6 text-sm font-bold">Stay Connected</h4>
+                <p class="text-sm leading-relaxed">Be one of the first to receive new product launches, sale offers, collabs &amp; more.</p>
+                <form action="#" class="mt-5 flex overflow-hidden rounded-full border border-white">
+                    <input type="email" placeholder="Your email" aria-label="Email" class="min-w-0 flex-1 bg-transparent px-5 py-3 text-sm text-white outline-none placeholder:text-neutral-400">
+                    <button type="submit" class="px-5" aria-label="Subscribe">&rarr;</button>
+                </form>
+            </div>
+        </div>
+        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <img src="images/ascolour_040.svg" alt="AS Colour 20 Years" class="h-12 w-auto self-start md:h-14">
+            <div>
+                <p class="mb-3 text-sm">United States | USD$</p>
+                <div class="flex flex-wrap items-center gap-1.5">
+                    <img src="images/ascolour_041.svg" alt="Visa" class="h-5">
+                    <img src="images/ascolour_042.svg" alt="Mastercard" class="h-5">
+                    <img src="images/ascolour_043.svg" alt="Maestro" class="h-5">
+                    <img src="images/ascolour_044.svg" alt="American Express" class="h-5">
+                    <img src="images/ascolour_045.svg" alt="Discover" class="h-5">
+                    <img src="images/ascolour_046.svg" alt="Diners Club" class="h-5">
+                    <img src="images/ascolour_047.svg" alt="PayPal" class="h-5">
+                    <img src="images/ascolour_048.svg" alt="Apple Pay" class="h-5">
+                    <img src="images/ascolour_049.svg" alt="Google Pay" class="h-5">
+                    <img src="images/ascolour_050.svg" alt="Klarna" class="h-5">
+                    <img src="images/ascolour_051.svg" alt="Cash App" class="h-5">
+                    <img src="images/ascolour_052.svg" alt="JCB" class="h-5">
+                    <img src="images/ascolour_053.svg" alt="UnionPay" class="h-5">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="flex justify-between bg-bronze px-4 py-3 text-xs text-black md:px-10">
+        <span>&copy; 2026 AS Colour. Premium Blanks</span>
+        <a href="#">Back to top &uarr;</a>
+    </div>
+
+</body>
+</html>

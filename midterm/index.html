@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AS Colour - Premium Blanks</title>
+    <link rel="stylesheet" href="css/output.css">
+</head>
+<body class="bg-white font-sans text-neutral-900">
+
+    <!-- ===== Header / Navbar (Tailwind) ===== -->
+    <header class="bg-black text-white">
+        <div class="flex items-center justify-between gap-4 px-4 py-4 md:px-8">
+            <div class="flex items-center gap-8">
+                <a href="index.html"><img src="images/ascolour_001.svg" alt="AS Colour" class="h-5 md:h-6"></a>
+                <nav class="hidden gap-6 text-sm lg:flex">
+                    <a href="#" class="hover:text-gold">Men</a>
+                    <a href="#" class="hover:text-gold">Women</a>
+                    <a href="#" class="hover:text-gold">Kids</a>
+                    <a href="#" class="hover:text-gold">Headwear</a>
+                    <a href="#" class="hover:text-gold">About</a>
+                    <a href="#" class="hover:text-gold">Journal</a>
+                    <a href="#" class="text-gold">Outlet</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4 text-sm md:gap-6">
+                <a href="#" class="hidden md:inline">Search</a>
+                <a href="#" class="hidden md:inline">Sign In</a>
+                <a href="#" aria-label="Cart" class="flex items-center gap-1">
+                    <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l1 13H5L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+                    <span class="text-xs">0</span>
+                </a>
+                <a href="#" class="hidden rounded-full bg-white px-4 py-2 text-black md:inline-block">Create Account</a>
+                <label for="menu-toggle" class="cursor-pointer lg:hidden" aria-label="Open menu">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+                </label>
+            </div>
+        </div>
+        <!-- CSS-only mobile menu: checkbox + Tailwind peer-checked -->
+        <input type="checkbox" id="menu-toggle" class="peer hidden">
+        <nav class="hidden flex-col gap-4 border-t border-neutral-800 px-4 py-4 text-sm peer-checked:flex lg:!hidden">
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">Kids</a>
+            <a href="#">Headwear</a>
+            <a href="#">About</a>
+            <a href="#">Journal</a>
+            <a href="#" class="text-gold">Outlet</a>
+            <a href="#">Search</a>
+            <a href="#">Sign In</a>
+        </nav>
+    </header>
+
+    <!-- ===== Men / Women Hero ===== -->
+    <section class="flex flex-col md:flex-row">
+        <a href="#" class="relative h-80 md:h-[520px] md:w-1/2">
+            <img src="images/ascolour_016.webp" alt="Men - grey hoodie" class="h-full w-full object-cover">
+            <span class="absolute bottom-6 left-6 text-3xl font-bold text-white">Men</span>
+        </a>
+        <a href="#" class="relative h-80 md:h-[520px] md:w-1/2">
+            <img src="images/ascolour_017.webp" alt="Women - black zip hoodie" class="h-full w-full object-cover">
+            <span class="absolute bottom-6 left-6 text-3xl font-bold text-white">Women</span>
+        </a>
+    </section>
+
+    <!-- ===== Sub Categories ===== -->
+    <section class="flex flex-wrap">
+        <a href="#" class="relative h-56 w-1/2 md:h-80 lg:h-[430px] lg:w-1/4">
+            <img src="images/ascolour_018.webp" alt="T-Shirts" class="h-full w-full object-cover">
+            <span class="absolute left-4 top-4 text-lg font-bold text-white md:left-6 md:top-6 md:text-2xl">T-Shirts</span>
+        </a>
+        <a href="#" class="relative h-56 w-1/2 md:h-80 lg:h-[430px] lg:w-1/4">
+            <img src="images/ascolour_019.webp" alt="Headwear" class="h-full w-full object-cover">
+            <span class="absolute left-4 top-4 text-lg font-bold text-white md:left-6 md:top-6 md:text-2xl">Headwear</span>
+        </a>
+        <a href="#" class="relative h-56 w-1/2 md:h-80 lg:h-[430px] lg:w-1/4">
+            <img src="images/ascolour_020.webp" alt="Sweats" class="h-full w-full object-cover">
+            <span class="absolute left-4 top-4 text-lg font-bold text-white md:left-6 md:top-6 md:text-2xl">Sweats</span>
+        </a>
+        <a href="#" class="relative h-56 w-1/2 md:h-80 lg:h-[430px] lg:w-1/4">
+            <img src="images/ascolour_021.webp" alt="Jackets" class="h-full w-full object-cover">
+            <span class="absolute left-4 top-4 text-lg font-bold text-white md:left-6 md:top-6 md:text-2xl">Jackets</span>
+        </a>
+    </section>
+
+    <!-- ===== Intro ===== -->
+    <section class="px-4 py-12 text-center">
+        <p class="text-xs font-bold uppercase tracking-widest text-neutral-400">Established in New Zealand, 2005</p>
+        <h1 class="my-6 text-2xl font-bold md:text-4xl">AS Colour | Premium Blanks | Built to Last</h1>
+        <p class="text-xs font-bold uppercase tracking-widest text-neutral-400">The global leader in premium blank apparel</p>
+    </section>
+
+    <!-- ===== Feature Image ===== -->
+    <section class="relative mx-4 md:mx-10">
+        <img src="images/ascolour_024.jpg" alt="Lucca Mart screen printing, Los Angeles" class="h-64 w-full object-cover md:h-[460px] lg:h-[620px]">
+        <span class="absolute bottom-4 left-4 text-xs text-white">LUCCA MART - LOS ANGELES, US</span>
+    </section>
+
+    <!-- ===== Quick Link Tiles ===== -->
+    <section class="mx-4 mt-4 flex flex-wrap gap-1 md:mx-10">
+        <a href="#" class="relative h-36 w-[calc(50%-2px)] md:h-56 lg:w-[calc(25%-3px)]">
+            <img src="images/ascolour_026.gif" alt="Outlet" class="h-full w-full object-cover">
+        </a>
+        <a href="#" class="relative h-36 w-[calc(50%-2px)] md:h-56 lg:w-[calc(25%-3px)]">
+            <img src="images/ascolour_027.avif" alt="Printing Equipment" class="h-full w-full object-cover">
+            <span class="absolute bottom-3 left-3 text-base font-bold text-white md:text-xl">Printing Equipment</span>
+        </a>
+        <a href="#" class="relative h-36 w-[calc(50%-2px)] md:h-56 lg:w-[calc(25%-3px)]">
+            <img src="images/ascolour_028.webp" alt="Organic" class="h-full w-full object-cover">
+            <span class="absolute bottom-3 left-3 text-base font-bold text-white md:text-xl">Organic</span>
+        </a>
+        <a href="#" class="relative h-36 w-[calc(50%-2px)] md:h-56 lg:w-[calc(25%-3px)]">
+            <img src="images/ascolour_029.avif" alt="Bags" class="h-full w-full object-cover">
+            <span class="absolute bottom-3 left-3 text-base font-bold text-white md:text-xl">Bags</span>
+        </a>
+    </section>
+
+    <!-- ===== Product Listing: 8 cards (Tailwind flex-wrap grid) =====
+         Every card links to the same product page. -->
+    <section class="mt-8 bg-soft px-4 py-12 md:px-10">
+        <h2 class="mb-8 text-center text-2xl font-bold">Shop New Arrivals</h2>
+        <div class="-mx-2 flex flex-wrap">
+
+            <div class="mb-4 w-1/2 px-2 md:w-1/3 lg:w-1/4">
+                <div class="relative flex h-full flex-col bg-white p-4 text-center">
+                    <span class="absolute left-3 top-3 rounded-full bg-black px-3 py-1 text-[10px] text-white">New</span>
+                    <a href="product.html" class="flex flex-1 flex-col">
+                        <img src="images/ascolour_030.jpg" alt="Wo's Organic Collegiate Tank" class="mb-4 h-40 w-full object-contain md:h-60">
+                        <h3 class="text-xs font-bold md:text-sm">Wo's Organic Collegiate Tank | 4097</h3>
+                    </a>
+                    <p class="my-2 text-sm">$28.00</p>
+                    <button type="button" class="w-full bg-black py-2 text-xs font-bold text-white hover:bg-neutral-700">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="mb-4 w-1/2 px-2 md:w-1/3 lg:w-1/4">
+                <div class="relative flex h-full flex-col bg-white p-4 text-center">
+                    <span class="absolute left-3 top-3 rounded-full bg-black px-3 py-1 text-[10px] text-white">New</span>
+                    <a href="product.html" class="flex flex-1 flex-col">
+                        <img src="images/ascolour_031.webp" alt="Rugby Stripe" class="mb-4 h-40 w-full object-contain md:h-60">
+                        <h3 class="text-xs font-bold md:text-sm">Rugby Stripe | 5416</h3>
+                    </a>
+                    <p class="my-2 text-sm">$55.00</p>
+                    <button type="button" class="w-full bg-black py-2 text-xs font-bold text-white hover:bg-neutral-700">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="mb-4 w-1/2 px-2 md:w-1/3 lg:w-1/4">
+                <div class="relative flex h-full flex-col bg-white p-4 text-center">
+                    <a href="product.html" class="flex flex-1 flex-col">
+                        <img src="images/ascolour_032.webp" alt="Classic Minus Tee" class="mb-4 h-40 w-full object-contain md:h-60">
+                        <h3 class="text-xs font-bold md:text-sm">Classic Minus Tee | 5079</h3>
+                    </a>
+                    <p class="my-2 text-sm">$32.00</p>
+                    <button type="button" class="w-full bg-black py-2 text-xs font-bold text-white hover:bg-neutral-700">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="mb-4 w-1/2 px-2 md:w-1/3 lg:w-1/4">
+                <div class="relative flex h-full flex-col bg-white p-4 text-center">
+                    <a href="product.html" class="flex flex-1 flex-col">
+                        <img src="images/ascolour_033.webp" alt="Frame Foam Two-Tone Trucker" class="mb-4 h-40 w-full object-contain md:h-60">
+                        <h3 class="text-xs font-bold md:text-sm">Frame Foam Two-Tone Trucker | 1163</h3>
+                    </a>
+                    <p class="my-2 text-sm">$20.00</p>
+                    <button type="button" class="w-full bg-black py-2 text-xs font-bold text-white hover:bg-neutral-700">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="mb-4 w-1/2 px-2 md:w-1/3 lg:w-1/4">
+                <div class="relative flex h-full flex-col bg-white p-4 text-center">
+                    <a href="product.html" class="flex flex-1 flex-col">
+                        <img src="images/ascolour_012.jpg" alt="Cuff Beanie" class="mb-4 h-40 w-full object-cover md:h-60">
+                        <h3 class="text-xs font-bold md:text-sm">Cuff Beanie | 1120</h3>
+                    </a>
+                    <p class="my-2 text-sm">$18.00</p>
+                    <button type="button" class="w-full bg-black py-2 text-xs font-bold text-white hover:bg-neutral-700">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="mb-4 w-1/2 px-2 md:w-1/3 lg:w-1/4">
+                <div class="relative flex h-full flex-col bg-white p-4 text-center">
+                    <a href="product.html" class="flex flex-1 flex-col">
+                        <img src="images/ascolour_006.jpg" alt="Wo's Half Zip Crew" class="mb-4 h-40 w-full object-cover md:h-60">
+                        <h3 class="text-xs font-bold md:text-sm">Wo's Half Zip Crew | 4125</h3>
+                    </a>
+                    <p class="my-2 text-sm">$62.00</p>
+                    <button type="button" class="w-full bg-black py-2 text-xs font-bold text-white hover:bg-neutral-700">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="mb-4 w-1/2 px-2 md:w-1/3 lg:w-1/4">
+                <div class="relative flex h-full flex-col bg-white p-4 text-center">
+                    <a href="product.html" class="flex flex-1 flex-col">
+                        <img src="images/ascolour_004.jpg" alt="Relax Hood" class="mb-4 h-40 w-full object-cover md:h-60">
+                        <h3 class="text-xs font-bold md:text-sm">Relax Hood | 5161</h3>
+                    </a>
+                    <p class="my-2 text-sm">$58.00</p>
+                    <button type="button" class="w-full bg-black py-2 text-xs font-bold text-white hover:bg-neutral-700">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="mb-4 w-1/2 px-2 md:w-1/3 lg:w-1/4">
+                <div class="relative flex h-full flex-col bg-white p-4 text-center">
+                    <a href="product.html" class="flex flex-1 flex-col">
+                        <img src="images/ascolour_003.jpg" alt="Service Jacket" class="mb-4 h-40 w-full object-cover md:h-60">
+                        <h3 class="text-xs font-bold md:text-sm">Service Jacket | 5527</h3>
+                    </a>
+                    <p class="my-2 text-sm">$85.00</p>
+                    <button type="button" class="w-full bg-black py-2 text-xs font-bold text-white hover:bg-neutral-700">Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== Celebrating 20 Years ===== -->
+    <section class="flex flex-col items-center gap-8 px-4 py-12 md:px-10 lg:flex-row lg:gap-16">
+        <div class="lg:w-1/2">
+            <h2 class="mb-6 text-2xl font-bold md:text-4xl">Celebrating over 20 years of premium blanks</h2>
+            <p class="mb-6 max-w-lg leading-relaxed">Proudly New Zealand owned and operated since 2005. We're passionate about designing premium blank apparel for the creators and makers of today.</p>
+            <a href="#" class="text-sm font-bold">Learn more about us &rarr;</a>
+        </div>
+        <div class="w-full lg:w-1/2">
+            <img src="images/ascolour_034.webp" alt="Model in vest and hoodie in a forest" class="h-72 w-full object-cover md:h-[560px]">
+        </div>
+    </section>
+
+    <!-- ===== Warehouse ===== -->
+    <section class="flex flex-col-reverse items-center gap-8 bg-soft px-4 py-12 md:px-10 lg:flex-row lg:gap-16">
+        <div class="w-full lg:w-1/2">
+            <img src="images/ascolour_035.webp" alt="Charlotte warehouse" class="h-72 w-full object-cover md:h-[560px]">
+        </div>
+        <div class="lg:w-1/2">
+            <h2 class="mb-6 text-2xl font-bold md:text-4xl">Our new warehouse, servicing the East Coast: Charlotte</h2>
+            <p class="mb-6 max-w-lg leading-relaxed">Our second distribution centre in Charlotte, North Carolina, is now servicing the East Coast. This 240,000 sq ft facility is our largest yet, and will enable faster shipping times and hold bigger volumes across all products and styles.</p>
+            <a href="#" class="text-sm font-bold">View all showrooms &rarr;</a>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="px-4 py-16 text-center md:py-20">
+        <p class="text-xs font-bold uppercase tracking-widest text-neutral-400">Grow your business</p>
+        <h2 class="my-6 text-2xl font-bold md:text-4xl">Leverage the power of blank apparel today</h2>
+        <a href="#" class="inline-block rounded-full bg-neutral-800 px-6 py-2 text-sm text-white">Create Account</a>
+    </section>
+
+    <!-- ===== Journal ===== -->
+    <section class="bg-soft px-4 pb-16 pt-12 md:px-10">
+        <div class="mb-6 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+            <div>
+                <h2 class="mb-2 text-2xl font-bold">The Journal</h2>
+                <p class="text-sm">The latest industry news, interviews, products, technology and resources</p>
+            </div>
+            <a href="#" class="text-sm underline">All Articles</a>
+        </div>
+        <div class="flex flex-col gap-8 md:flex-row md:gap-5">
+            <a href="#" class="md:w-1/3">
+                <img src="images/ascolour_036.webp" alt="AS Colour x Cotton Australia" class="mb-4 h-56 w-full object-cover lg:h-72">
+                <h3 class="mb-2 text-sm font-bold uppercase">AS Colour x Cotton Australia</h3>
+                <p class="mb-4 text-sm leading-relaxed text-neutral-600">AS Colour x Cotton Australia celebrated World Cotton Day in Melbourne with live screen printing, local food and...</p>
+                <span class="text-sm">Read more &rarr;</span>
+            </a>
+            <a href="#" class="md:w-1/3">
+                <img src="images/ascolour_037.webp" alt="AS Colour x Freeter x Kobo" class="mb-4 h-56 w-full object-cover lg:h-72">
+                <h3 class="mb-2 text-sm font-bold uppercase">AS Colour x Freeter x Kobo</h3>
+                <p class="mb-4 text-sm leading-relaxed text-neutral-600">AS Colour teamed up with Freeter Studio and Studio Kobo to create the world's largest hanging T-shirt. A 170XL...</p>
+                <span class="text-sm">Read more &rarr;</span>
+            </a>
+            <a href="#" class="md:w-1/3">
+                <img src="images/ascolour_038.webp" alt="Merch Series: Fabel Friet" class="mb-4 h-56 w-full object-cover lg:h-72">
+                <h3 class="mb-2 text-sm font-bold uppercase">Merch Series: Fabel Friet, Amsterdam.</h3>
+                <p class="mb-4 text-sm leading-relaxed text-neutral-600">AS Colour teamed up with Fabel Friet, one of Amsterdam's best-loved fry shops, on a neighbourhood collab and a...</p>
+                <span class="text-sm">Read more &rarr;</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== Footer (identical on both pages) ===== -->
+    <footer class="bg-black px-4 pb-10 pt-16 text-white md:px-10">
+        <div class="mb-16 flex flex-wrap gap-y-10">
+            <div class="w-1/2 pr-4 lg:w-1/4">
+                <h4 class="mb-6 text-sm font-bold">Company</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="hover:text-gold">About Us</a></li>
+                    <li><a href="#" class="hover:text-gold">Careers</a></li>
+                    <li><a href="#" class="hover:text-gold">Showroom Locations</a></li>
+                    <li><a href="#" class="hover:text-gold">Social Responsibility</a></li>
+                </ul>
+                <p class="mt-6 text-sm leading-relaxed">+1 (213) 213-5531<br>support@ascolour.com</p>
+            </div>
+            <div class="w-1/2 pr-4 lg:w-1/4">
+                <h4 class="mb-6 text-sm font-bold">Customer Service</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="hover:text-gold">FAQs</a></li>
+                    <li><a href="#" class="hover:text-gold">Shipping</a></li>
+                    <li><a href="#" class="hover:text-gold">Returns</a></li>
+                    <li><a href="#" class="hover:text-gold">The Journal</a></li>
+                    <li><a href="#" class="hover:text-gold">Terms / Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-gold">Gift Vouchers</a></li>
+                </ul>
+            </div>
+            <div class="w-1/2 pr-4 lg:w-1/4">
+                <h4 class="mb-6 text-sm font-bold">Wholesale Resources</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="hover:text-gold">Fabric Range</a></li>
+                    <li><a href="#" class="hover:text-gold">Colour Range</a></li>
+                    <li><a href="#" class="hover:text-gold">Downloads &amp; Assets</a></li>
+                    <li><a href="#" class="hover:text-gold">Printers &amp; Embroiderers</a></li>
+                    <li><a href="#" class="hover:text-gold">Invoices &amp; Payments (TermSync)</a></li>
+                </ul>
+            </div>
+            <div class="w-full lg:w-1/4">
+                <h4 class="mb-6 text-sm font-bold">Stay Connected</h4>
+                <p class="text-sm leading-relaxed">Be one of the first to receive new product launches, sale offers, collabs &amp; more.</p>
+                <form action="#" class="mt-5 flex overflow-hidden rounded-full border border-white">
+                    <input type="email" placeholder="Your email" aria-label="Email" class="min-w-0 flex-1 bg-transparent px-5 py-3 text-sm text-white outline-none placeholder:text-neutral-400">
+                    <button type="submit" class="px-5" aria-label="Subscribe">&rarr;</button>
+                </form>
+            </div>
+        </div>
+        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <img src="images/ascolour_040.svg" alt="AS Colour 20 Years" class="h-12 w-auto self-start md:h-14">
+            <div>
+                <p class="mb-3 text-sm">United States | USD$</p>
+                <div class="flex flex-wrap items-center gap-1.5">
+                    <img src="images/ascolour_041.svg" alt="Visa" class="h-5">
+                    <img src="images/ascolour_042.svg" alt="Mastercard" class="h-5">
+                    <img src="images/ascolour_043.svg" alt="Maestro" class="h-5">
+                    <img src="images/ascolour_044.svg" alt="American Express" class="h-5">
+                    <img src="images/ascolour_045.svg" alt="Discover" class="h-5">
+                    <img src="images/ascolour_046.svg" alt="Diners Club" class="h-5">
+                    <img src="images/ascolour_047.svg" alt="PayPal" class="h-5">
+                    <img src="images/ascolour_048.svg" alt="Apple Pay" class="h-5">
+                    <img src="images/ascolour_049.svg" alt="Google Pay" class="h-5">
+                    <img src="images/ascolour_050.svg" alt="Klarna" class="h-5">
+                    <img src="images/ascolour_051.svg" alt="Cash App" class="h-5">
+                    <img src="images/ascolour_052.svg" alt="JCB" class="h-5">
+                    <img src="images/ascolour_053.svg" alt="UnionPay" class="h-5">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="flex justify-between bg-bronze px-4 py-3 text-xs text-black md:px-10">
+        <span>&copy; 2026 AS Colour. Premium Blanks</span>
+        <a href="#">Back to top &uarr;</a>
+    </div>
+
+</body>
+</html>
